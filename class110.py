@@ -32,6 +32,8 @@ def show_fig(mean_list):
     fig=ff.create_distplot([df],['temp'],show_hist=False)
     fig.add_trace(go.Scatter(x=[mean,mean],y=[0,1],mode="lines",name='Mean'))
     fig.show()
+    
+    z_score=(mean_of_sample1-mean)/std_deviation
 
 def setup():
     mean_list=[]
